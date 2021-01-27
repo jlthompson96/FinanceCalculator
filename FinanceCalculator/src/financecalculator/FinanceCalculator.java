@@ -32,7 +32,7 @@ public class FinanceCalculator {
         System.out.println("Finance Calculator");
         System.out.println("------------------");
         System.out.println();
-        System.out.println("1.Intrest Calculator");
+        System.out.println("1.Interest Calculator");
         System.out.println("2.Car Loan Calculator");
         System.out.println("3.Mortgage Calculator");
         System.out.println("4.Stock Return Calculator");
