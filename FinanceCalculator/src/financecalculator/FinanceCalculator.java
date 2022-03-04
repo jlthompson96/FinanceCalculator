@@ -4,8 +4,9 @@
  */
 package financecalculator;
 
-import java.util.ArrayList;
 import java.util.Scanner;
+
+import java.util.ArrayList;
 
 /**
  * @version 1
@@ -19,9 +20,11 @@ public class FinanceCalculator {
     public static void main(String[] args) {
         int c;
         c = menu();
-        if (c == 1) {
-            compoundCalc();           
-        }
+        do {
+            if (c == 1) {
+                compoundCalc();
+            }
+        } while (c <= 4);
     }
     /**
      * void method that displays selection menu
@@ -55,11 +58,11 @@ public class FinanceCalculator {
         System.out.println("Interest Calculator");
         System.out.println("-------------------");
         System.out.println();
-        System.out.print("What is your inital balance? ");
+        System.out.print("What is your initial balance? ");
         double initBalance = keyboard.nextDouble();
         System.out.print("What is the interest rate? ");
         double interestRate = keyboard.nextDouble();
-        System.out.println("How often does it compund? ");
+        System.out.println("How often does it compound? ");
         System.out.println("--------------------------");
         System.out.println("1 - Yearly");
         System.out.println("4 - Quarterly");
@@ -67,6 +70,10 @@ public class FinanceCalculator {
         System.out.println("365 - Daily");
         System.out.print("Enter a number from the list above: ");
         int compound = keyboard.nextInt();
+        while(compound != 1 & compound != 4 & compound != 12 & compound!=365){
+            System.out.println("Please enter a valid frequency");
+            compound = keyboard.nextInt();
+        }
         System.out.print("How many years is your money compounding? ");
         double years = keyboard.nextDouble();
         InterestCalculator ic = new InterestCalculator(compound,years,initBalance,interestRate);
