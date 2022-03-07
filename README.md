@@ -13,7 +13,7 @@ This program was written in Netbeans you can import the project into netbeans or
 * Display output to user
 
 # Future Plans
-* Add more finanical calculators(Car loans, ROI, Taxes)
+* Add more financial calculators(Car loans, ROI, Taxes)
 * User Interface Redesign - Possibly adding a GUI
 
 <!--
